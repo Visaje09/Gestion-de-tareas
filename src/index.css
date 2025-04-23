@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animaciones personalizadas */
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-[1.02];
+  }
+  .will-change-transform {
+    will-change: transform;
+  }
+}
+
+/* Estilos base personalizados */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Componentes personalizados con hovers */
+@layer components {
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-emerald-400/30;
+  }
+  
+  .task-item {
+    @apply hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200 cursor-pointer;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow hover:shadow-lg transition-all duration-300;
+  }
+  
+  .input-hover {
+    @apply hover:border-emerald-300 focus:ring-2 focus:ring-emerald-200 dark:focus:ring-emerald-500/50;
+  }
+}
