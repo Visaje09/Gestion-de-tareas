@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Animaciones personalizadas */
 @layer utilities {
   .animate-float {
     animation: float 3s ease-in-out infinite;
@@ -20,7 +19,7 @@
   }
 }
 
-/* Estilos base personalizados */
+
 @layer base {
   html {
     @apply scroll-smooth;
@@ -31,7 +30,7 @@
   }
 }
 
-/* Componentes personalizados con hovers */
+
 @layer components {
   .card {
     @apply bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-emerald-400/30;
